@@ -3,7 +3,7 @@ package main
 import (
 	"slices"
 
-	"github.com/AlexxIT/go2rtc/internal/alsa"
+	// "github.com/AlexxIT/go2rtc/internal/alsa"
 	"github.com/AlexxIT/go2rtc/internal/api"
 	"github.com/AlexxIT/go2rtc/internal/api/ws"
 	"github.com/AlexxIT/go2rtc/internal/app"
@@ -34,12 +34,13 @@ import (
 	"github.com/AlexxIT/go2rtc/internal/ring"
 	"github.com/AlexxIT/go2rtc/internal/roborock"
 	"github.com/AlexxIT/go2rtc/internal/rtmp"
+	"github.com/AlexxIT/go2rtc/internal/rtp"
 	"github.com/AlexxIT/go2rtc/internal/rtsp"
 	"github.com/AlexxIT/go2rtc/internal/srtp"
 	"github.com/AlexxIT/go2rtc/internal/streams"
 	"github.com/AlexxIT/go2rtc/internal/tapo"
 	"github.com/AlexxIT/go2rtc/internal/tuya"
-	"github.com/AlexxIT/go2rtc/internal/v4l2"
+	// "github.com/AlexxIT/go2rtc/internal/v4l2"
 	"github.com/AlexxIT/go2rtc/internal/webrtc"
 	"github.com/AlexxIT/go2rtc/internal/webtorrent"
 	"github.com/AlexxIT/go2rtc/internal/wyoming"
@@ -82,8 +83,8 @@ func main() {
 		{"expr", expr.Init},
 		{"ffmpeg", ffmpeg.Init},
 		// Hardware sources
-		{"alsa", alsa.Init},
-		{"v4l2", v4l2.Init},
+		// {"alsa", alsa.Init},
+		// {"v4l2", v4l2.Init},
 		// Other sources
 		{"bubble", bubble.Init},
 		{"doorbird", doorbird.Init},
@@ -106,6 +107,7 @@ func main() {
 		{"ngrok", ngrok.Init},
 		{"pinggy", pinggy.Init},
 		{"srtp", srtp.Init},
+		{"rtp", rtp.Init},
 	}
 
 	for _, m := range modules {
